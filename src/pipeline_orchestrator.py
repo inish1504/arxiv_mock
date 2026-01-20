@@ -12,6 +12,9 @@ from datetime import datetime
 from typing import Dict, List, Optional
 import yaml
 
+from .summary_generator import MockSummaryGenerator
+
+
 
 class MockPipelineOrchestrator:
     """
@@ -679,9 +682,7 @@ The top three papers form a complementary research foundation:
             
         Returns:
             Mock summary dictionary matching real format
-        """
-        from .mock_summary_generator import MockSummaryGenerator
-        
+        """        
         mock_summary_gen = MockSummaryGenerator()
         return mock_summary_gen.generate_summary(paper)
     
